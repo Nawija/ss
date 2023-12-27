@@ -10,7 +10,7 @@ import { RiInstagramFill } from "react-icons/ri";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/o-mnie", label: "O Mnie" },
-  { href: "/usługa", label: "Usługa" },
+  { href: "/usluga", label: "Usługa" },
   { href: "/galeria", label: "Galeria" },
   { href: "/blog", label: "Blog" },
   { href: "/kontakt", label: "Kontakt" },
@@ -64,12 +64,7 @@ function NavLinksDesctop({
             className={clsx(
               `mx-3 px-2 py-2 text-[14px] font-semibold transition-colors duration-75`,
               {
-                "hover:text-white":
-                  pathname === "/" && pathname !== link.href && !colorNav,
-              },
-              {
-                "hover:text-yellow-500":
-                  pathname !== "/" && pathname !== link.href && !colorNav,
+                "hover:text-white": pathname !== link.href && !colorNav,
               },
               {
                 "text-yellow-500": pathname === link.href,
@@ -137,8 +132,8 @@ function BurgerMenu({
   return (
     <button
       aria-label="Menu"
-      className={`z-50 order-1 h-12 rounded-lg p-2.5 lg:order-none lg:hidden transition-transform duration-500 ${
-        showMenu ? "rotate-[360deg] -translate-x-2" : ""
+      className={`z-50 order-1 h-12 rounded-lg p-2.5 transition-transform duration-500 lg:order-none lg:hidden ${
+        showMenu ? "-translate-x-2 rotate-[360deg]" : ""
       }`}
       onClick={handleMenu}
     >
