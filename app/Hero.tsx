@@ -1,7 +1,7 @@
 "use client";
 import HeroImg from "@/public/images/seovileo-hero.jpg";
-import { useInView } from "framer-motion";
 import Image from "next/image";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 export default function Hero() {

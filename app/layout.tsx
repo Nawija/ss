@@ -21,10 +21,9 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={`${inter.className} mx-auto max-w-[2000px]`}>
+      <body className={`${inter.className} mx-auto max-w-[2000px] `}>
         <Nav />
-        <main>{children}</main>
-        <div className="h-[300vh]" />
+        <main className="w-full overflow-x-hidden">{children}</main>
       </body>
     </html>
   );

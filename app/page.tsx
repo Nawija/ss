@@ -78,24 +78,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center py-12 md:py-24">
+
+      <div className="sticky top-12 -z-20 w-full">
+        <div
+          className={`absolute -top-96 left-12 h-96 w-96 rounded-full bg-sky-500 p-96 opacity-[0.06] blur-3xl`}
+        />
+        <div
+          className={`absolute right-12 top-40 h-96 w-96 rounded-full bg-red-500 p-96 opacity-5 blur-3xl`}
+        />
+      </div>
+
+
+      <section className="flex flex-col items-center justify-center py-12 md:pb-24">
         <p className="mb-6 text-2xl tracking-wide">Usługi</p>
 
         <div className="flex flex-col items-center justify-center space-x-4 md:flex-row">
           {uslugi.map((u, id) => (
             <div
               key={id}
-              className="relative mb-12 rounded-xl bg-gradient-to-tl from-stone-700 via-stone-900 to-black px-12 pb-24 pt-12 text-start shadow-lg shadow-stone-800"
+              className="group relative mb-12 overflow-hidden border border-zinc-500/10 px-12 pb-24 pt-12 text-start shadow-lg shadow-stone-800 transition-transform hover:scale-105"
             >
-              <span className="text-4xl text-white/20">{u.icon}</span>
-              <h2 className="mb-4 mt-2 text-2xl">{u.title}</h2>
-              <p>
+              <span className="text-5xl text-white/20">{u.icon}</span>
+              <h2 className="my-3 text-2xl">{u.title}</h2>
+              <p className="text-2xl text-green-300">
                 od {u.price}
                 <small>zł</small>
               </p>
               <Link href={u.href}>
-                <div className="absolute -bottom-6 -right-6 ml-auto mt-10 w-max rounded-full bg-black p-10 text-end text-xl">
-                  <FaArrowRight />
+                <div className="absolute -bottom-6 -right-6 ml-auto mt-10 w-max rounded-full bg-gray-900/50 p-10 text-end text-xl">
+                  <FaArrowRight className="group-hover:text-white" />
                 </div>
               </Link>
             </div>
@@ -104,7 +115,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-12 md:flex-row md:py-24">
-        <div className="top-16 mb-12 w-full text-center text-2xl md:sticky md:mb-0 md:w-1/2 md:text-start md:text-3xl">
+        <div className="top-16 mb-32 w-full px-4 text-center text-3xl md:sticky md:mb-0 md:w-1/2 md:text-start md:text-3xl">
           <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
         </div>
         <div className="flex flex-col items-center justify-center px-4 md:pl-12">
@@ -169,11 +180,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative h-96 w-full py-12 md:py-24">
+      <section className="relative h-96 w-full py-32 md:py-32">
         <Image src={s1} alt="..." fill style={{ objectFit: "cover" }} />
       </section>
-      <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-12 md:flex-row">
-        <div className="top-16 mb-12 w-full text-center text-3xl md:sticky md:order-1 md:mb-0 md:w-1/2 md:text-start">
+      <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-24 md:flex-row">
+        <div className="top-16 mb-32 w-full text-center text-3xl md:sticky md:order-1 md:mb-0 md:w-1/2 md:text-start">
           <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
         </div>
         <div className="flex flex-col items-center justify-center px-4 md:pr-12">

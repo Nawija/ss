@@ -133,7 +133,7 @@ function BurgerMenu({
     <button
       aria-label="Menu"
       className={`z-50 order-1 h-12 rounded-lg p-2.5 transition-transform duration-500 lg:order-none lg:hidden ${
-        showMenu ? "-translate-x-2 rotate-[360deg]" : ""
+        showMenu ? "-translate-x-2 rotate-90 scale-110" : ""
       }`}
       onClick={handleMenu}
     >
