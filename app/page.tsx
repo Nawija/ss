@@ -23,15 +23,21 @@ export default function Home() {
     <>
       <Hero />
       <section className="z-10 mx-auto -mt-24 flex flex-col items-center justify-center overflow-x-hidden text-center">
-        <h2 className="mb-6 text-2xl tracking-wide">Portfolio</h2>
-        <div className="mx-auto grid max-w-screen-2xl grid-cols-2 gap-2 px-2 text-start md:gap-4 lg:grid-cols-6">
+        <h2 className="mb-6 text-2xl tracking-wide">Realizacje</h2>
+        <div className="mx-auto grid max-w-screen-2xl grid-cols-2 md:grid-cols-3 gap-2 px-2 text-start md:gap-4 lg:grid-cols-6">
           {portfolioImg.map((i, id) => (
             <Link
               href="/"
               key={id}
-              className="group relative h-80 overflow-hidden rounded-lg"
+              className="group relative h-80 w-full overflow-hidden rounded-lg"
             >
-              <Image src={i.img} alt="..." style={{ objectFit: "cover" }} className=" group-hover:scale-105 transition-transform duration-300" />
+              <Image
+                src={i.img}
+                alt="..."
+                height={500}
+                width={500}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/10" />
               <p className="absolute bottom-2 left-2 z-10 max-w-36 text-xl text-white">
                 {i.title}
