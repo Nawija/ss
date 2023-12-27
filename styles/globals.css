@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 body {
-    color: rgba(255, 255, 255, 0.80);
-    background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #000000;
 }
 
 .slide-bottom {
-	animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
- @keyframes slide-bottom {
+@keyframes slide-bottom {
   0% {
     transform: translateY(-100%);
   }
@@ -20,19 +20,29 @@ body {
   }
 }
 .rotateImg {
-	animation: rotateImg 50s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: rotateImg 50s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
- @keyframes rotateImg {
+@keyframes rotateImg {
   0% {
-    transform: scale(1.3);
+    transform: scale(1.5);
+    filter: hue-rotate(0deg)
+  }
+  20% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(200deg);
+  }
+
+  80% {
+    filter: hue-rotate(0deg);
   }
   100% {
     transform: rotate(0);
-
   }
 }
-
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

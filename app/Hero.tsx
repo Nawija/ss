@@ -30,7 +30,7 @@ export default function Hero() {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
           }}
         >
-          developer
+          developer seovileo
         </small>
         <h1
           className="text-5xl lg:text-7xl"
