@@ -23,7 +23,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} mx-auto max-w-[2000px] `}>
         <Nav />
-        <main className="w-full overflow-x-hidden">{children}</main>
+        <main className="w-full overflow-x-hidden lg:overflow-x-visible">
+          {children}
+        </main>
       </body>
     </html>
   );

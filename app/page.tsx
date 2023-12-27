@@ -1,6 +1,7 @@
 import Hero from "@/app/Hero";
 import Image from "next/image";
 
+import BgAnimation from "@/components/BgAnimation";
 import s1 from "@/public/images/portfolio/1.jpg";
 import s2 from "@/public/images/portfolio/2.jpg";
 import s3 from "@/public/images/portfolio/3.jpg";
@@ -78,7 +79,6 @@ export default function Home() {
         </div>
       </section>
 
-
       <div className="sticky top-12 -z-20 w-full">
         <div
           className={`absolute -top-96 left-12 h-96 w-96 rounded-full bg-sky-500 p-96 opacity-[0.06] blur-3xl`}
@@ -87,7 +87,6 @@ export default function Home() {
           className={`absolute right-12 top-40 h-96 w-96 rounded-full bg-red-500 p-96 opacity-5 blur-3xl`}
         />
       </div>
-
 
       <section className="flex flex-col items-center justify-center py-12 md:pb-24">
         <p className="mb-6 text-2xl tracking-wide">Usługi</p>
@@ -114,8 +113,10 @@ export default function Home() {
         </div>
       </section>
 
+      <BgAnimation />
+
       <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-12 md:flex-row md:py-24">
-        <div className="top-16 mb-32 w-full px-4 text-center text-3xl md:sticky md:mb-0 md:w-1/2 md:text-start md:text-3xl">
+        <div className="top-16 mb-32 h-full w-full px-4 text-center text-3xl md:sticky md:mb-0 md:w-1/2 md:text-start md:text-3xl">
           <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
         </div>
         <div className="flex flex-col items-center justify-center px-4 md:pl-12">
