@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function BgAnimation() {
   const [x, setX] = useState(0);
-  const [scrollYValue, setScrollYValue] = useState<number>(window.scrollY);
+  const [scrollYValue, setScrollYValue] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
