@@ -8,16 +8,17 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <section className="relative h-[85vh] w-full " ref={ref}>
+    <section className="relative h-[85vh] w-full overflow-hidden " ref={ref}>
       <div className="relative -z-10 h-full w-full">
         <Image
           src={HeroImg}
           fill
           style={{ objectFit: "cover" }}
           alt="seovileo-hero"
+          className="rotateImg"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/90" />
       </div>
 
       <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-8 text-center lg:left-[10%] lg:translate-x-0 lg:items-start lg:text-start">
@@ -41,11 +42,14 @@ export default function Hero() {
         >
           Seovileo
         </h1>
-        <p className="mt-6 max-w-2xl text-white/70" style={{
+        <p
+          className="mt-6 max-w-2xl text-white/70"
+          style={{
             transform: isInView ? "none" : "translateY(200px)",
             opacity: isInView ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
-          }}>
+          }}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem debitis molestiae voluptas accusantium doloremque
           ipsam, nobis veritatis dolorem deleniti molestias harum, adipisci nam
