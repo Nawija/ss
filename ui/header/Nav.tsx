@@ -1,12 +1,11 @@
 "use client";
 
+import clsx from "clsx";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
-import { MainBtn } from "@/ui/buttons/MainBtn";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -177,7 +176,7 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 300) {
         setColorNav(true);
       } else {
         setColorNav(false);
@@ -191,18 +190,31 @@ export default function Nav() {
   }, []);
 
   return (
-    <header className="absolute top-0 left-1/2 z-[999] w-full max-w-[1800px] -translate-x-1/2">
-      <nav className="flex items-center justify-between py-2 md:py-4 px-3 md:px-12">
+    <header
+      className={clsx(
+        `top-0 z-[999] w-full max-w-[1800px] `,
+        { "fixed left-0": showMenu === true },
+        {
+          "slide-bottom fixed left-0 -translate-x-full":
+            colorNav === true,
+        },
+        {
+          "absolute left-1/2 -translate-x-1/2":
+            showMenu === false && colorNav === false,
+        },
+      )}
+    >
+      <nav className="flex items-center justify-between px-3 py-2 md:px-12 md:py-4">
         <Link
           href="/"
-          className="font-semibold flex items-center justify-center"
+          className="z-50 flex items-center justify-center font-semibold"
         >
           <svg
             width="100"
             height="100"
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-auto mr-1"
+            className="mr-1 h-8 w-auto"
           >
             <path
               fill-rule="evenodd"
