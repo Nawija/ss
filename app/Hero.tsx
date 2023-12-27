@@ -23,7 +23,7 @@ export default function Hero() {
 
       <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-8 text-center lg:left-[10%] lg:translate-x-0 lg:items-start lg:text-start">
         <small
-          className="mb-2 ml-3 font-light uppercase tracking-[0.5rem] lg:text-sm lg:text-white/60"
+          className="mb-2 ml-3 font-light uppercase tracking-[0.3rem] lg:tracking-[0.5rem] lg:text-sm lg:text-white/60"
           style={{
             transform: isInView ? "none" : "translateX(-200px)",
             opacity: isInView ? 1 : 0,
@@ -37,7 +37,7 @@ export default function Hero() {
           style={{
             transform: isInView ? "none" : "translateY(200px)",
             opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
+            transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
           Seovileo
