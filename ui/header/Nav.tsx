@@ -72,11 +72,7 @@ function NavLinksDesctop({
                   pathname !== "/" && pathname !== link.href && !colorNav,
               },
               {
-                "text-yellow-500": pathname !== "/" && pathname === link.href,
-              },
-              {
-                "text-white":
-                  pathname === link.href && !colorNav && pathname === "/",
+                "text-yellow-500": pathname === link.href,
               },
               {
                 "hover:text-white": pathname !== link.href && colorNav,
@@ -176,7 +172,7 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 200) {
         setColorNav(true);
       } else {
         setColorNav(false);
@@ -192,11 +188,10 @@ export default function Nav() {
   return (
     <header
       className={clsx(
-        `top-0 z-[999] w-full max-w-[1800px] `,
+        `top-0 z-[999] w-full`,
         { "fixed left-0": showMenu === true },
         {
-          "slide-bottom fixed left-0 -translate-x-full":
-            colorNav === true,
+          "slide-bottom fixed left-0 bg-black/50 lg:backdrop-blur-sm": colorNav === true,
         },
         {
           "absolute left-1/2 -translate-x-1/2":
@@ -204,7 +199,7 @@ export default function Nav() {
         },
       )}
     >
-      <nav className="flex items-center justify-between px-3 py-2 md:px-12 md:py-4">
+      <nav className="mx-auto flex  max-w-[1800px] items-center justify-between px-3 py-2 md:px-12">
         <Link
           href="/"
           className="z-50 flex items-center justify-center font-semibold"
