@@ -9,6 +9,6 @@ const config: Config = {
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: ["prettier-plugin-tailwindcss"],
 };
 export default config;
