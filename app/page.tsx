@@ -7,7 +7,6 @@ import s3 from "@/public/images/portfolio/3.jpg";
 import s4 from "@/public/images/portfolio/4.jpg";
 import s5 from "@/public/images/portfolio/5.jpg";
 import s6 from "@/public/images/portfolio/6.jpg";
-import { MainBtn } from "@/ui/buttons/MainBtn";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdOutlineDesignServices, MdOutlineShoppingCart } from "react-icons/md";
@@ -54,7 +53,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section className="z-10 mx-auto -mt-24 flex flex-col items-center justify-center overflow-x-hidden pb-12 md:pb-24 text-center">
+      <section className="z-10 mx-auto -mt-24 flex flex-col items-center justify-center overflow-x-hidden pb-12 text-center md:pb-24">
         <h2 className="mb-6 text-2xl tracking-wide">Realizacje</h2>
         <div className="mx-auto grid max-w-screen-2xl grid-cols-2 gap-2 px-2 text-start md:grid-cols-3 md:gap-4 lg:grid-cols-6">
           {portfolioImg.map((i, id) => (
@@ -83,8 +82,11 @@ export default function Home() {
         <p className="mb-6 text-2xl tracking-wide">Usługi</p>
 
         <div className="flex flex-col items-center justify-center space-x-4 md:flex-row">
-          {uslugi.map((u) => (
-            <div className="relative mb-12 rounded-xl bg-gradient-to-tl from-stone-700 to-black shadow-lg shadow-stone-800 via-stone-900 px-12 pb-24 pt-12 text-start">
+          {uslugi.map((u, id) => (
+            <div
+              key={id}
+              className="relative mb-12 rounded-xl bg-gradient-to-tl from-stone-700 via-stone-900 to-black px-12 pb-24 pt-12 text-start shadow-lg shadow-stone-800"
+            >
               <span className="text-4xl text-white/20">{u.icon}</span>
               <h2 className="mb-4 mt-2 text-2xl">{u.title}</h2>
               <p>
@@ -92,7 +94,7 @@ export default function Home() {
                 <small>zł</small>
               </p>
               <Link href={u.href}>
-                <div className="absolute -bottom-6 -right-6 text-xl ml-auto mt-10 w-max rounded-full bg-black p-10 text-end">
+                <div className="absolute -bottom-6 -right-6 ml-auto mt-10 w-max rounded-full bg-black p-10 text-end text-xl">
                   <FaArrowRight />
                 </div>
               </Link>
