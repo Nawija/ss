@@ -20,15 +20,16 @@ body {
   }
 }
 .rotateImg {
-  animation: rotateImg 30s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate-reverse infinite;
+  animation: rotateImg 25s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    alternate-reverse infinite;
 }
 
 @keyframes rotateImg {
   0% {
-    transform: scale(1.5);
-    filter: hue-rotate(0deg)
+    transform: scale(1);
+    filter: hue-rotate(0deg);
   }
-  30% {
+  40% {
     filter: hue-rotate(0deg);
   }
 
@@ -36,11 +37,14 @@ body {
     filter: hue-rotate(200deg);
   }
 
-  70% {
+  55% {
     filter: hue-rotate(0deg);
   }
+  90%{
+    transform: scale(1.5);
+  }
   100% {
-    transform: rotate(0);
+    transform: scale(1);
   }
 }
 
