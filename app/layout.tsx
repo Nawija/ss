@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
+      <head>
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body className={`${inter.className} mx-auto max-w-[2000px]`}>
         <Nav />
         <main>{children}</main>
