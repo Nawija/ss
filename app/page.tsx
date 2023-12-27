@@ -24,7 +24,7 @@ export default function Home() {
       <Hero />
       <section className="z-10 mx-auto -mt-24 flex flex-col items-center justify-center overflow-x-hidden text-center">
         <h2 className="mb-6 text-2xl tracking-wide">Realizacje</h2>
-        <div className="mx-auto grid max-w-screen-2xl grid-cols-2 md:grid-cols-3 gap-2 px-2 text-start md:gap-4 lg:grid-cols-6">
+        <div className="mx-auto grid max-w-screen-2xl grid-cols-2 gap-2 px-2 text-start md:grid-cols-3 md:gap-4 lg:grid-cols-6">
           {portfolioImg.map((i, id) => (
             <Link
               href="/"
@@ -44,6 +44,141 @@ export default function Home() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+      <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-12 md:flex-row md:py-24">
+        <div className="top-16 mb-12 w-full text-center text-2xl md:sticky md:mb-0 md:w-1/2 md:text-start md:text-3xl">
+          <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+        </div>
+        <div className="flex flex-col items-center justify-center px-4 md:pl-12">
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              1
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              2
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              3
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              4
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              5
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="relative h-96 w-full py-12 md:py-24">
+        <Image src={s1} alt="..." fill style={{ objectFit: "cover" }} />
+      </section>
+      <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-12 md:flex-row">
+        <div className="top-16 md:order-1 mb-12 w-full text-center text-3xl md:sticky md:mb-0 md:w-1/2 md:text-start">
+          <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+        </div>
+        <div className="flex flex-col items-center justify-center px-4 md:pr-12">
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              1
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              2
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              3
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              4
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
+          <div className="my-6 h-24 w-px bg-yellow-500/50" />
+          <div className="flex items-center justify-center">
+            <div className="from mr-6 flex -rotate-12 items-center justify-center rounded-full px-4 py-2 text-9xl font-semibold opacity-10">
+              5
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam explicabo doloribus eius error esse sint tempore
+              eligendi, deleniti aliquid ratione. A tempora expedita natus
+              placeat eveniet quaerat corporis rerum soluta?
+            </p>
+          </div>
         </div>
       </section>
     </>
