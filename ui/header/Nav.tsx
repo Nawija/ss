@@ -137,23 +137,23 @@ function BurgerMenu({
   return (
     <button
       aria-label="Menu"
-      className={`z-50 order-1 h-12 rounded-lg p-2.5 lg:order-none lg:hidden transition-transform${
-        showMenu ? "" : "rotate-90"
+      className={`z-50 order-1 h-12 rounded-lg p-2.5 lg:order-none lg:hidden transition-transform duration-500 ${
+        showMenu ? "rotate-[360deg] -translate-x-2" : ""
       }`}
       onClick={handleMenu}
     >
       <div
-        className={`h-0.5 rounded-lg bg-yellow-500 transition-all ${
+        className={`h-0.5 rounded-lg bg-yellow-500 transition-all duration-200 ${
           showMenu ? "w-4 -rotate-45 scale-110" : "m-1 w-4"
         }`}
       />
       <div
-        className={` h-0.5 rounded-lg bg-yellow-500 transition-all ${
+        className={` h-0.5 rounded-lg bg-yellow-500 transition-all duration-200 ${
           showMenu ? "scale-0" : "m-1 w-3"
         }`}
       />
       <div
-        className={` h-0.5 rounded-lg bg-yellow-500 transition-all ${
+        className={` h-0.5 rounded-lg bg-yellow-500 transition-all duration-200 ${
           showMenu ? "w-4 -translate-y-1 rotate-45 scale-110" : "m-1 w-4"
         }`}
       />
@@ -191,7 +191,8 @@ export default function Nav() {
         `top-0 z-[999] w-full`,
         { "fixed left-0": showMenu === true },
         {
-          "slide-bottom fixed left-0 bg-black/50 lg:backdrop-blur-sm": colorNav === true,
+          "slide-bottom fixed left-0 bg-black/50 lg:backdrop-blur-sm":
+            colorNav === true,
         },
         {
           "absolute left-1/2 -translate-x-1/2":
