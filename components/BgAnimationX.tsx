@@ -22,16 +22,14 @@ export default function BgAnimationX() {
   }, []);
 
   useEffect(() => {
-    setX(scrollYValue / 10);
-    setRotate(scrollYValue / 10);
+    setX(scrollYValue / 30);
+    setRotate(scrollYValue / 100);
   }, [scrollYValue]);
   return (
-    <div className="w-full overflow-hidden">
-      <motion.div
-        className="absolute -z-30 h-80 w-80 border-4 border-dotted opacity-10"
-        animate={{ x, rotate }}
-        transition={{ type: "spring" }}
-      />
-    </div>
+    <motion.div
+      className="absolute left-0 -z-30 h-40 w-40 lg:h-80 lg:w-80 border-4 border-dotted opacity-20"
+      animate={{ x, rotate }}
+      transition={{ type: "spring" }}
+    />
   );
 }
