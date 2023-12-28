@@ -12,12 +12,12 @@ import Link from "next/link";
 import { useRef } from "react";
 
 const portfolioImg = [
-  { img: s1, title: "Portfolio", time:"0.1" },
-  { img: s2, title: "Nazoltej", time:"0.2" },
-  { img: s3, title: "Emelab", time:"0.3" },
-  { img: s4, title: "Jarek Olszewski", time:"0.4" },
-  { img: s5, title: "Portfolio", time:"0.5" },
-  { img: s6, title: "Portfolio Xyz", time:"0.6" },
+  { img: s1, title: "Portfolio", time: "0.1" },
+  { img: s2, title: "Nazoltej", time: "0.2" },
+  { img: s3, title: "Emelab", time: "0.3" },
+  { img: s4, title: "Jarek Olszewski", time: "0.4" },
+  { img: s5, title: "Portfolio", time: "0.5" },
+  { img: s6, title: "Portfolio Xyz", time: "0.6" },
 ];
 
 export default function Realization() {
@@ -44,7 +44,11 @@ export default function Realization() {
               alt="..."
               height={300}
               width={200}
+              placeholder="blur"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 640px) 50vw,
+                  (max-width: 1280px) 30vw,
+                  25vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/10" />
             <p className="absolute bottom-2 left-2 z-10 max-w-36 text-xl text-white">

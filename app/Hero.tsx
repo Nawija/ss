@@ -16,6 +16,7 @@ export default function Hero() {
           style={{ objectFit: "cover", filter: "contrast(110%)" }}
           alt="seovileo-hero"
           className="rotateImg"
+          placeholder="blur"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/90" />
