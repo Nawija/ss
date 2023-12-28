@@ -54,11 +54,11 @@ export default function Services() {
     >
       <p className="mb-6 text-2xl tracking-wide">Usługi</p>
 
-      <div className="flex flex-col items-center justify-center space-x-4 md:flex-row">
+      <div className="flex flex-col items-center justify-center space-x-4 md:flex-row w-3/4">
         {uslugi.map((u, id) => (
           <div
             key={id}
-            className="group relative mb-12 overflow-hidden border border-stone-500/20 px-12 pb-24 pt-12 text-start shadow-lg shadow-stone-800 transition-transform hover:scale-105"
+            className="group relative mb-12 overflow-hidden border border-stone-500/20 lg:px-12 px-24 pb-24 pt-12 text-start shadow-lg w-full shadow-stone-800 transition-transform hover:scale-105"
           >
             <span className="text-5xl group-hover:animate-pulse text-white/20">{u.icon}</span>
             <h2 className="my-3 text-xl">{u.title}</h2>

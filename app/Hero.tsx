@@ -8,7 +8,7 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden ">
+    <section className="relative h-screen lg:h-[85vh] w-full overflow-hidden ">
       <div className="relative -z-10 h-full w-full">
         <Image
           src={HeroImg}
@@ -18,7 +18,7 @@ export default function Hero() {
           className="rotateImg"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
       </div>
 
       <div
