@@ -66,7 +66,7 @@ export default function Services() {
               od {u.price}
               <small>zł</small>
             </p>
-            <Link href={u.href}>
+            <Link href={u.href} title="Zobacz" aria-label="Zobacz">
               <div className="absolute -bottom-6 -right-6 ml-auto mt-10 w-max rounded-full bg-gray-900/50 group-hover:bg-gray-800 transition-colors p-10 text-end text-xl">
                 <FaArrowRight className="group-hover:text-white" />
               </div>
