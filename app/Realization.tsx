@@ -1,15 +1,11 @@
-"use client";
-
 import s1 from "@/public/images/portfolio/1.jpg";
 import s2 from "@/public/images/portfolio/2.jpg";
 import s3 from "@/public/images/portfolio/3.jpg";
 import s4 from "@/public/images/portfolio/4.jpg";
 import s5 from "@/public/images/portfolio/5.jpg";
 import s6 from "@/public/images/portfolio/6.jpg";
-import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
 
 const portfolioImg = [
   { img: s1, title: "Portfolio", time: "0.1" },
@@ -21,8 +17,6 @@ const portfolioImg = [
 ];
 
 export default function Realization() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <section className="z-10 mx-auto -mt-24 flex flex-col items-center justify-center overflow-x-hidden pb-12 text-center md:pb-24">
       <h2 className="mb-6 text-2xl tracking-wide">Realizacje</h2>
@@ -32,12 +26,6 @@ export default function Realization() {
             href="/"
             key={id}
             className="group relative h-64 w-full overflow-hidden rounded-lg md:h-80"
-            ref={ref}
-            style={{
-              transform: isInView ? "none" : "translateY(-200px)",
-              opacity: isInView ? 1 : 0,
-              transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${i.time}s`,
-            }}
           >
             <Image
               src={i.img}

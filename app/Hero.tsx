@@ -8,7 +8,7 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden " ref={ref}>
+    <section className="relative h-[85vh] w-full overflow-hidden ">
       <div className="relative -z-10 h-full w-full">
         <Image
           src={HeroImg}
@@ -16,13 +16,15 @@ export default function Hero() {
           style={{ objectFit: "cover", filter: "contrast(110%)" }}
           alt="seovileo-hero"
           className="rotateImg"
-          placeholder="blur"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/90" />
       </div>
 
-      <div className="absolute left-1/2 top-1/2 flex w-full max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-8 text-center lg:left-[10%] lg:translate-x-0 lg:items-start lg:text-start">
+      <div
+        ref={ref}
+        className="absolute left-1/2 top-[45%] md:top-1/2 flex w-full max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-4 text-center lg:left-[10%] lg:translate-x-0 lg:items-start lg:text-start"
+      >
         <small
           className="mb-2 ml-3 font-light uppercase tracking-[0.3rem] lg:text-sm lg:tracking-[0.5rem] lg:text-white/60"
           style={{
@@ -44,9 +46,9 @@ export default function Hero() {
           Strony Internetowe Oparte Na Najnowszych Trendach Technologicznych
         </h1>
         <p
-          className="mt-6 text-white/70"
+          className="mt-6 text-white/80 md:text-white/70"
           style={{
-            transform: isInView ? "none" : "translateY(200px)",
+            transform: isInView ? "none" : "translateX(200px)",
             opacity: isInView ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
           }}
