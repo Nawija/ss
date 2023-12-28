@@ -1,119 +1,33 @@
 import Hero from "@/app/Hero";
-import Image from "next/image";
 
-import BgAnimation from "@/components/BgAnimation";
-import s1 from "@/public/images/portfolio/1.jpg";
-import s2 from "@/public/images/portfolio/2.jpg";
-import s3 from "@/public/images/portfolio/3.jpg";
-import s4 from "@/public/images/portfolio/4.jpg";
-import s5 from "@/public/images/portfolio/5.jpg";
-import s6 from "@/public/images/portfolio/6.jpg";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa6";
-import { MdOutlineDesignServices, MdOutlineShoppingCart } from "react-icons/md";
-import { PiBrowsersFill } from "react-icons/pi";
-import { TbSeo } from "react-icons/tb";
+import ImgAction from "@/app/ImgAction";
+import Realization from "@/app/Realization";
+import Services from "@/app/Services";
+import BgAnimationX from "@/components/BgAnimationX";
+import BgAnimationY from "@/components/BgAnimationY";
 
-const portfolioImg = [
-  { img: s1, title: "Portfolio" },
-  { img: s2, title: "Nazoltej" },
-  { img: s3, title: "Emelab" },
-  { img: s4, title: "Jarek Olszewski" },
-  { img: s5, title: "Portfolio" },
-  { img: s6, title: "Portfolio Xyz" },
-];
 
-const uslugi = [
-  {
-    href: "/",
-    title: "Strona Internetowa",
-    price: "1200",
-    icon: <PiBrowsersFill />,
-  },
-  {
-    href: "/",
-    title: "Sklep Internetowy",
-    price: "3200",
-    icon: <MdOutlineShoppingCart />,
-  },
-  {
-    href: "/",
-    title: "Optymalizacja SEO",
-    price: "1700",
-    icon: <TbSeo />,
-  },
-  {
-    href: "/",
-    title: "Projekty Graficzne",
-    price: "300",
-    icon: <MdOutlineDesignServices />,
-  },
-];
+
+
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <section className="z-10 mx-auto -mt-24 flex flex-col items-center justify-center overflow-x-hidden pb-12 text-center md:pb-24">
-        <h2 className="mb-6 text-2xl tracking-wide">Realizacje</h2>
-        <div className="mx-auto grid max-w-screen-2xl grid-cols-2 gap-2 px-2 text-start md:grid-cols-3 md:gap-4 lg:grid-cols-6">
-          {portfolioImg.map((i, id) => (
-            <Link
-              href="/"
-              key={id}
-              className="group relative h-80 w-full overflow-hidden rounded-lg"
-            >
-              <Image
-                src={i.img}
-                alt="..."
-                height={300}
-                width={200}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/10" />
-              <p className="absolute bottom-2 left-2 z-10 max-w-36 text-xl text-white">
-                {i.title}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
+      <Realization />
+      <Services />
       <div className="sticky top-12 -z-20 w-full">
         <div
-          className={`absolute -top-96 left-12 h-96 w-96 rounded-full bg-sky-500 p-96 opacity-[0.06] blur-3xl`}
+          className={`absolute -top-96 left-12 h-96 w-96 rounded-full bg-sky-500 p-96 opacity-[0.07] blur-3xl`}
         />
         <div
           className={`absolute right-12 top-40 h-96 w-96 rounded-full bg-red-500 p-96 opacity-5 blur-3xl`}
         />
       </div>
 
-      <section className="flex flex-col items-center justify-center py-12 md:pb-24">
-        <p className="mb-6 text-2xl tracking-wide">Usługi</p>
+      
 
-        <div className="flex flex-col items-center justify-center space-x-4 md:flex-row">
-          {uslugi.map((u, id) => (
-            <div
-              key={id}
-              className="group relative mb-12 overflow-hidden border border-zinc-500/10 px-12 pb-24 pt-12 text-start shadow-lg shadow-stone-800 transition-transform hover:scale-105"
-            >
-              <span className="text-5xl text-white/20">{u.icon}</span>
-              <h2 className="my-3 text-2xl">{u.title}</h2>
-              <p className="text-2xl text-green-300">
-                od {u.price}
-                <small>zł</small>
-              </p>
-              <Link href={u.href}>
-                <div className="absolute -bottom-6 -right-6 ml-auto mt-10 w-max rounded-full bg-gray-900/50 p-10 text-end text-xl">
-                  <FaArrowRight className="group-hover:text-white" />
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <BgAnimation />
+      <BgAnimationX />
 
       <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-12 md:flex-row md:py-24">
         <div className="top-16 mb-32 h-full w-full px-4 text-center text-3xl md:sticky md:mb-0 md:w-1/2 md:text-start md:text-3xl">
@@ -181,9 +95,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative h-96 w-full py-32 md:py-32">
-        <Image src={s1} alt="..." fill style={{ objectFit: "cover" }} />
-      </section>
+
+      <ImgAction />
+
+      <BgAnimationY />
       <section className="mx-auto flex max-w-screen-xl flex-col items-start justify-center px-4 py-24 md:flex-row">
         <div className="top-16 mb-32 w-full text-center text-3xl md:sticky md:order-1 md:mb-0 md:w-1/2 md:text-start">
           <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
